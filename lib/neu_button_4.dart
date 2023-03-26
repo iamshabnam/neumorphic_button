@@ -41,7 +41,10 @@ class _NeuButton4State extends State<NeuButton4> {
     final Color backgroundColor = isDarkMode ? const Color(0xFF2E3239) : const Color(0xFFE7ECEF);
     final Color shadowColor1 = isDarkMode ? const Color(0xFF35393F) : Colors.white;
     final Color shadowColor2 = isDarkMode ? const Color(0xFF23262A) : const Color(0xFFA7A9AF);
-    final Offset blurOffset = isPressed ? const Offset(10, 10) : const Offset(28, 28);
+    // final Color shadowColor1 = isDarkMode ? Colors.white.withOpacity(0.1) : Colors.white.withOpacity(0.8);
+    // final Color backgroundColor = isDarkMode ? const Color(0xFF292D32) : const Color(0xFFEFEEEE);
+    // final Color shadowColor2 = isDarkMode ? Colors.black.withOpacity(0.4) : Colors.black.withOpacity(0.1);
+    final Offset blurOffset = isPressed ? const Offset(10, 10) : const Offset(20, 20);
     final double blurRadius = isPressed ? 5.0 : 60.0;
     return Scaffold(
       appBar: AppBar(
@@ -110,9 +113,10 @@ class _NeuButton4State extends State<NeuButton4> {
                     child: Text(
                       'BUTTON 4',
                       style: TextStyle(
-                          color: isDarkMode ? Colors.black : Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
+                        color: isDarkMode ? Colors.black : Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
             ),
@@ -122,7 +126,3 @@ class _NeuButton4State extends State<NeuButton4> {
     );
   }
 }
-
-// Future getData() async {
-//   await Future.delayed(const Duration(seconds: 5));
-// }
